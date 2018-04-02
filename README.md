@@ -12,16 +12,22 @@
 
 ## Requirements
 
-* [Node.js](https://nodejs.org/)
-* [gulp](http://gulpjs.com/)
+* [Docker](https://docs.docker.com/engine/) and [docker-compose](https://docs.docker.com/compose/)
+
+Install this prerequisites on OSX with [homebrew](https://brew.sh/index_fr):
+
+```
+$ brew update
+$ brew cask install docker
+```
 
 
 ## Install
 
 ```
-$ sudo npm install --global gulp
-$ cd <project_folder>
-$ npm install
+$ docker-compose up -d
+$ docker-compose exec app bash
+# npm install
 ```
 
 ## Generate site
@@ -29,10 +35,10 @@ $ npm install
 ### Activate local server and build site
 
 ```
-$ gulp
+# gulp
 ```
 
-Open your browser with http://127.0.0.1:8888/
+Open your browser with http://0.0.0.0:8888/
 
 
 ### Activate local server with livereload
