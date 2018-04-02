@@ -36,11 +36,11 @@ gulp.task('render_content', function () {
 });
 
 gulp.task('copy_vendors', function(){
-    
+
     //copy bootstrap src
     var stream = gulp.src(node + 'bootstrap/**/*')
         .pipe(gulp.dest(src + 'assets/vendors/bootstrap'));
-    
+
     //copy font-awesome src
     gulp.src(node + 'font-awesome/**/*')
         .pipe(gulp.dest(src + 'assets/vendors/font-awesome'));
@@ -117,7 +117,7 @@ gulp.task('watchers', function () {
 // Local server to preview result
 gulp.task('server', function() {
     connect.server({
-        host: '127.0.0.1',
+        host: '0.0.0.0',
         port: 8888,
         root: build,
         livereload: false
